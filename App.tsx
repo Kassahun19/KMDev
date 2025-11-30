@@ -53,17 +53,15 @@ const App: React.FC = () => {
           onClose={() => setIsContactOpen(false)}
         />
 
-        <div className="dark fixed bottom-4 right-4 z-50">
-          <div
-            className="w-[92vw] max-w-lg h-[580px] sm:w-96 sm:h-[600px] 
+        <div
+          className="w-[92vw] max-w-lg h-[580px] sm:w-96 sm:h-[600px] 
                   bg-background text-foreground 
                   border border-border rounded-xl shadow-2xl 
                   overflow-hidden flex flex-col
                   [sm:bg-white]:!bg-background 
                   [sm:dark:bg-zinc-900]:!bg-background"
-          >
-            <AIChat />
-          </div>
+        >
+          <AIChat />
         </div>
 
         {/* Theme Switcher */}

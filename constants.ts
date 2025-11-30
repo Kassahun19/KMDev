@@ -16,7 +16,8 @@ export const PERSONAL_INFO = {
 };
 
 // Random Software Company/Office Image
-export const PROFILE_IMAGE = "./Kassahun.jpg";
+export const PROFILE_IMAGE =
+  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80";
 
 export const BUY_ME_COFFEE_URL = "http://ye-buna.com/kassahunmulatu";
 
