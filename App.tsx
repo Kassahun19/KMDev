@@ -45,6 +45,7 @@ const App: React.FC = () => {
 
         <main className="relative z-10">{renderView()}</main>
 
+        <div className="pb-20 md:pb-10" />
         <Footer onNavigate={handleNavigate} />
 
         {/* Modals & Floating Elements */}
