@@ -51,7 +51,11 @@ const App: React.FC = () => {
         
         {/* Modals & Floating Elements */}
         <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-        <AIChat />
+
+
+        <div className="dark">
+          <AIChat />
+        </div>
 
         {/* Theme Switcher */}
         <ThemeToggle />
