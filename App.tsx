@@ -45,7 +45,6 @@ const App: React.FC = () => {
 
         <main className="relative z-10">{renderView()}</main>
 
-        <div className="pb-20 md:pb-10" />
         <Footer onNavigate={handleNavigate} />
 
         {/* Modals & Floating Elements */}
@@ -55,15 +54,16 @@ const App: React.FC = () => {
         />
 
         <div className="dark bottom-4 right-4 z-50 pointer-events-none">
-            <div className="pointer-events-auto w-[92vw] max-w-lg h-[520px] sm:w-96 sm:h-[580px] 
-                  bg-background text-foreground 
-                  border border-border rounded-2xl shadow-2xl 
+          <div
+            className="pointer-events-auto w-[92vw] max-w-lg h-[520px] sm:w-96 sm:h-[580px]
+                  bg-background text-foreground
+                  border border-border rounded-2xl shadow-2xl
                   overflow-hidden flex flex-col
-                  [sm:bg-white]:!bg-background" >
-
-             <AIChat />
-
-           </div>
+                  [sm:bg-white]:!bg-background"
+          >
+            <AIChat />
+          </div>
+        </div>
 
         {/* Theme Switcher */}
         <ThemeToggle />
