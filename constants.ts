@@ -1,4 +1,4 @@
-import { Project, Course, TimelineItem, Theme } from './types';
+import { Project, Course, TimelineItem, Theme } from "./types";
 
 export const PERSONAL_INFO = {
   name: "Kassahun Mulatu",
@@ -11,12 +11,12 @@ export const PERSONAL_INFO = {
   socials: {
     github: "https://github.com",
     linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com"
-  }
+    twitter: "https://twitter.com",
+  },
 };
 
 // Random Software Company/Office Image
-export const PROFILE_IMAGE = "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop";
+export const PROFILE_IMAGE = "/Kassahun.jpg";
 
 export const BUY_ME_COFFEE_URL = "http://ye-buna.com/kassahunmulatu";
 
@@ -35,69 +35,75 @@ export const SKILLS = [
   { name: "JS", level: 86 },
   { name: "PHP", level: 66 },
   { name: "HTML", level: 96 },
-  { name: "Bootstrap", level: 76 }
+  { name: "Bootstrap", level: 76 },
 ];
 
 export const PROJECTS: Project[] = [
   {
     id: 1,
     title: "Amazon Clone",
-    description: "A full-featured e-commerce replica of Amazon. Features include user authentication, product search & filtering, shopping cart functionality, and Stripe payment integration. Built with a focus on pixel-perfect UI and scalable backend architecture.",
+    description:
+      "A full-featured e-commerce replica of Amazon. Features include user authentication, product search & filtering, shopping cart functionality, and Stripe payment integration. Built with a focus on pixel-perfect UI and scalable backend architecture.",
     technologies: ["React", "Node.js", "Express", "MySQL", "Stripe"],
     image: "https://picsum.photos/600/400?random=101",
     demoUrl: "#",
-    repoUrl: "#"
+    repoUrl: "#",
   },
   {
     id: 2,
     title: "Netflix Clone",
-    description: "A high-performance streaming platform clone. Includes movie trailers, genre categorization, and a dynamic 'My List' feature. Utilizes TMDB API for real-time data and features a responsive, cinematic user interface.",
+    description:
+      "A high-performance streaming platform clone. Includes movie trailers, genre categorization, and a dynamic 'My List' feature. Utilizes TMDB API for real-time data and features a responsive, cinematic user interface.",
     technologies: ["Next.js", "Typescript", "Tailwind CSS", "Firebase"],
     image: "https://picsum.photos/600/400?random=102",
     demoUrl: "#",
-    repoUrl: "#"
+    repoUrl: "#",
   },
   {
     id: 3,
     title: "Apple Website Clone",
-    description: "A stunning, animation-heavy recreation of the Apple website. Showcases complex scroll animations, 3D product rendering effects, and a fully responsive layout that mimics the premium feel of the original site.",
+    description:
+      "A stunning, animation-heavy recreation of the Apple website. Showcases complex scroll animations, 3D product rendering effects, and a fully responsive layout that mimics the premium feel of the original site.",
     technologies: ["React", "Three.js", "GSAP", "Node.js"],
     image: "https://picsum.photos/600/400?random=103",
     demoUrl: "#",
-    repoUrl: "#"
-  }
+    repoUrl: "#",
+  },
 ];
 
 export const COURSES: Course[] = [
   {
     id: 1,
     title: "Full Stack Web Development Bootcamp",
-    description: "A comprehensive guide to becoming a professional developer. Covers HTML, CSS, JavaScript, React, Node.js, and Databases.",
+    description:
+      "A comprehensive guide to becoming a professional developer. Covers HTML, CSS, JavaScript, React, Node.js, and Databases.",
     level: "Beginner to Pro",
-    icon: "code"
+    icon: "code",
   },
   {
     id: 2,
     title: "UI/UX Masterclass",
-    description: "Learn the principles of design, wireframing, and prototyping to build user-centered products.",
+    description:
+      "Learn the principles of design, wireframing, and prototyping to build user-centered products.",
     level: "Intermediate",
-    icon: "book"
+    icon: "book",
   },
   {
     id: 3,
     title: "Advanced React & Redux",
-    description: "Deep dive into React ecosystem, state management patterns, and performance optimization.",
+    description:
+      "Deep dive into React ecosystem, state management patterns, and performance optimization.",
     level: "Advanced",
-    icon: "calculator"
-  }
+    icon: "calculator",
+  },
 ];
 
 export const NAV_LINKS = [
-  { id: 'home', name: 'Home' },
-  { id: 'about', name: 'About' },
-  { id: 'courses', name: 'Courses' },
-  { id: 'projects', name: 'Projects' },
-  { id: 'contact', name: 'Contact' }
+  { id: "home", name: "Home" },
+  { id: "about", name: "About" },
+  { id: "courses", name: "Courses" },
+  { id: "projects", name: "Projects" },
+  { id: "contact", name: "Contact" },
 ];
 
 export const EDUCATION: TimelineItem[] = [
@@ -106,15 +112,17 @@ export const EDUCATION: TimelineItem[] = [
     period: "2016 - 2021",
     title: "BSc Degree in Electrical Engineering",
     institution: "Bahir Dar University",
-    description: "Graduated with honors. Focused on Control Systems, Embedded Systems, and Software Engineering principles."
+    description:
+      "Graduated with honors. Focused on Control Systems, Embedded Systems, and Software Engineering principles.",
   },
   {
     id: 2,
     period: "2020 - 2021",
     title: "Full Stack Web Development Certification",
     institution: "Udemy / Coursera",
-    description: "Completed intensive bootcamps focusing on modern web technologies including MERN stack and Cloud Computing."
-  }
+    description:
+      "Completed intensive bootcamps focusing on modern web technologies including MERN stack and Cloud Computing.",
+  },
 ];
 
 export const EXPERIENCE: TimelineItem[] = [
@@ -123,15 +131,17 @@ export const EXPERIENCE: TimelineItem[] = [
     period: "2022 - Present",
     title: "Freelance Full Stack Developer",
     institution: "Remote",
-    description: "Building custom web solutions for diverse clients. Architecting scalable applications and delivering high-quality code."
+    description:
+      "Building custom web solutions for diverse clients. Architecting scalable applications and delivering high-quality code.",
   },
   {
     id: 2,
     period: "2021 - 2022",
     title: "Web Developer & Educator",
     institution: "Self-Employed",
-    description: "Created educational content for aspiring developers and mentored students in web development technologies."
-  }
+    description:
+      "Created educational content for aspiring developers and mentored students in web development technologies.",
+  },
 ];
 
 export const THEMES: Theme[] = [];
