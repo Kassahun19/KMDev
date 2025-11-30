@@ -2,17 +2,23 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Kassahun Mulatu | Full Stack Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <script>
       tailwind = {
-        darkMode: 'class',
+        darkMode: "class",
         config: {
           theme: {
             extend: {
               fontFamily: {
-                sans: ['Inter', 'sans-serif'],
+                sans: ["Inter", "sans-serif"],
               },
               colors: {
                 border: "hsl(var(--border))",
@@ -49,10 +55,10 @@
                   foreground: "hsl(var(--card-foreground))",
                 },
               },
-            }
-          }
-        }
-      }
+            },
+          },
+        },
+      };
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -85,7 +91,7 @@
         --input: 214.3 31.8% 91.4%;
         --ring: 221.2 83.2% 53.3%;
       }
-      
+
       .dark {
         --background: 222.2 84% 4.9%; /* slate-950 */
         --foreground: 210 40% 98%; /* slate-50 */
@@ -117,7 +123,7 @@
       }
 
       body {
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
         background-color: hsl(var(--background));
         color: hsl(var(--foreground));
         transition: background-color 0.3s, color 0.3s;
@@ -137,24 +143,24 @@
         background: hsl(var(--muted-foreground) / 0.5);
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
-    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+          "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+          "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+          "react/": "https://aistudiocdn.com/react@^19.2.0/",
+          "react": "https://aistudiocdn.com/react@^19.2.0",
+          "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
   <body class="antialiased transition-colors duration-300">
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
