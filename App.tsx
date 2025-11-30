@@ -40,32 +40,23 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
-      <div className="min-h-screen font-sans relative bg-background text-foreground transition-colors duration-300">
+      <div className="min-h-screen font-sans relative bg-background text-foreground transition-colors duration-300 flex flex-col">
         <Navbar currentView={currentView} onNavigate={handleNavigate} />
-
-        <main className="relative z-10">{renderView()}</main>
-
-        <Footer onNavigate={handleNavigate} />
-
+        <main className="relative z-10 flex-grow">
+          {" "}
+          {/* ← flex-grow pushes footer down */}
+          {renderView()}
+        </main>
+        <Footer className="mt-auto" onNavigate={handleNavigate} />{" "}
+        {/* ← mt-auto sticks it to bottom */}
         {/* Modals & Floating Elements */}
         <Contact
           isOpen={isContactOpen}
           onClose={() => setIsContactOpen(false)}
         />
-
-        <div className="dark bottom-4 right-4 z-50 pointer-events-none">
-          <div
-            className="pointer-events-auto w-[92vw] max-w-lg h-[520px] sm:w-96 sm:h-[580px]
-                  bg-background text-foreground
-                  border border-border rounded-2xl shadow-2xl
-                  overflow-hidden flex flex-col
-                  [sm:bg-white]:!bg-background"
-          >
-            <AIChat />
-          </div>
+        <div className="dark">
+          <AIChat />
         </div>
-
-        {/* Theme Switcher */}
         <ThemeToggle />
       </div>
     </ThemeProvider>
