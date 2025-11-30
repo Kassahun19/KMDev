@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ←←← ADD YOUR CUSTOM SHADOW HERE ←←← */
+.dark .rounded-2xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3),
+    0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: even stronger shadow on mobile */
+@media (max-width: 640px) {
+  .dark .rounded-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+  }
+}
