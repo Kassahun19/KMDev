@@ -123,12 +123,12 @@ const AIChat: React.FC = () => {
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 50, scale: 0.9 }}
-              className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl w-[90vw] sm:w-[380px] h-[500px] max-h-[80vh] flex flex-col overflow-hidden border border-slate-200 dark:border-slate-700"
+              className="bg-background dark:bg-slate-900 rounded-2xl shadow-2xl w-[90vw] sm:w-[380px] h-[500px] max-h-[80vh] flex flex-col overflow-hidden border border-slate-200 dark:border-slate-700"
             >
               {/* Header */}
               <div className="bg-primary p-4 flex justify-between items-center text-white flex-shrink-0">
                 <div className="flex items-center gap-2">
-                  <div className="bg-white/20 p-1.5 rounded-lg">
+                  <div className="bg-background/20 p-1.5 rounded-lg">
                     <Sparkles size={18} />
                   </div>
                   <div>
@@ -141,7 +141,7 @@ const AIChat: React.FC = () => {
                 </div>
                 <button 
                   onClick={() => setIsOpen(false)}
-                  className="p-1 hover:bg-white/10 rounded-full transition-colors"
+                  className="p-1 hover:bg-background/10 rounded-full transition-colors"
                 >
                   <X size={20} />
                 </button>
@@ -159,7 +159,7 @@ const AIChat: React.FC = () => {
                         max-w-[85%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap
                         ${msg.role === 'user' 
                           ? 'bg-primary text-white rounded-tr-none' 
-                          : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-gray-100 dark:border-slate-700 rounded-tl-none shadow-sm'
+                          : 'bg-background dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-gray-100 dark:border-slate-700 rounded-tl-none shadow-sm'
                         }
                       `}
                     >
@@ -169,7 +169,7 @@ const AIChat: React.FC = () => {
                 ))}
                 {isLoading && (
                   <div className="flex justify-start">
-                     <div className="bg-white dark:bg-slate-800 px-4 py-3 rounded-2xl rounded-tl-none border border-gray-100 dark:border-slate-700 shadow-sm flex items-center gap-2">
+                     <div className="bg-background dark:bg-slate-800 px-4 py-3 rounded-2xl rounded-tl-none border border-gray-100 dark:border-slate-700 shadow-sm flex items-center gap-2">
                         <Loader2 size={16} className="animate-spin text-primary" />
                         <span className="text-xs text-slate-500 dark:text-slate-400">Thinking...</span>
                      </div>
@@ -179,7 +179,7 @@ const AIChat: React.FC = () => {
               </div>
 
               {/* Input Area */}
-              <div className="p-4 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-700 flex-shrink-0">
+              <div className="p-4 bg-background dark:bg-slate-900 border-t border-gray-100 dark:border-slate-700 flex-shrink-0">
                 <div className="flex gap-2 relative">
                   <div className="relative flex-1">
                     <input

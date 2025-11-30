@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Courses from './components/Courses';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import AIChat from './components/AIChat';
-import { ThemeProvider } from './contexts/ThemeProvider';
-import { ThemeToggle } from './components/ThemeToggle';
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Courses from "./components/Courses";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import AIChat from "./components/AIChat";
+import { ThemeProvider } from "./contexts/ThemeProvider";
+import { ThemeToggle } from "./components/ThemeToggle";
 
 const App: React.FC = () => {
-  const [currentView, setCurrentView] = useState('home');
+  const [currentView, setCurrentView] = useState("home");
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   const handleNavigate = (viewId: string) => {
-    if (viewId === 'contact') {
+    if (viewId === "contact") {
       setIsContactOpen(true);
     } else {
       setCurrentView(viewId);
@@ -25,13 +25,13 @@ const App: React.FC = () => {
 
   const renderView = () => {
     switch (currentView) {
-      case 'home':
+      case "home":
         return <Hero onNavigate={handleNavigate} />;
-      case 'about':
+      case "about":
         return <About onOpenContact={() => setIsContactOpen(true)} />;
-      case 'courses':
+      case "courses":
         return <Courses />;
-      case 'projects':
+      case "projects":
         return <Projects />;
       default:
         return <Hero onNavigate={handleNavigate} />;
@@ -42,19 +42,28 @@ const App: React.FC = () => {
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <div className="min-h-screen font-sans relative bg-background text-foreground transition-colors duration-300">
         <Navbar currentView={currentView} onNavigate={handleNavigate} />
-        
-        <main className="relative z-10">
-          {renderView()}
-        </main>
+
+        <main className="relative z-10">{renderView()}</main>
 
         <Footer onNavigate={handleNavigate} />
-        
+
         {/* Modals & Floating Elements */}
-        <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+        <Contact
+          isOpen={isContactOpen}
+          onClose={() => setIsContactOpen(false)}
+        />
 
-
-        <div className="dark">
-          <AIChat />
+        <div className="dark fixed bottom-4 right-4 z-50">
+          <div
+            className="w-[92vw] max-w-lg h-[580px] sm:w-96 sm:h-[600px] 
+                  bg-background text-foreground 
+                  border border-border rounded-xl shadow-2xl 
+                  overflow-hidden flex flex-col
+                  [sm:bg-white]:!bg-background 
+                  [sm:dark:bg-zinc-900]:!bg-background"
+          >
+            <AIChat />
+          </div>
         </div>
 
         {/* Theme Switcher */}
